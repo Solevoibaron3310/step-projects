@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+    <img class="hospital-logo" src="imgs/hospital-logo-design-vector-medical-cross_53876-136743.avif" alt="Hospital logo">
+
+    <button id="log-in" class="log-in">Log in</button>
+    <button id="create-visit" class="create-visit">Create new Visit</button>
+
+    </header>
+
+
+<main>
+    <section  class="filters">
+        <h1>Filters</h1>
+        <form id="filters-form" action="">
+            <label class="filters-labels" for="">Status</label>
+            <select class="filters-selector" name="status">
+                <option value="Open">Open</option>
+                <option value="Done">Done</option>
+            </select>
+            
+            <label class="filters-labels" for="">Urgency</label>
+            <select value="" class="filters-selector" name="urgency">
+                <option value="Open">High</option>
+                <option value="Done">Normal</option>
+                <option value="Low">Low</option>
+            </select>
+            
+            <input class="submit" type="button" placeholder="Submit" value="Submit">
+        </form>
+    </section>
+    
+   <section class="cards">
+
+  
+
+    
+
+   </section>
+</main>
+   <div class="Modal">
+        <title class="Modal__title">Please Log in to your account</title>
+        <form class="log-in-form" action="">
+            <label class="inputs-label" for="">Enter your Email</label>
+            <input id="emailInp" type="email" placeholder="Enter your email">
+            <label class="inputs-label" for="">Enter your Password</label>
+            <input id="passwordInp" type="password" placeholder="Enter your password">
+            <input class="log-in", id="logIn" value="Log in" type="submit">
+        </form>
+        <img id="close-modal" class="close-modal" src="imgs/png-klev-club-uve1-p-belii-krestik-png-2.png" alt="close modal">
+    </div>
+    
+    <div id="modal-of-visit" class="Visit-modal">
+        <form class="Visit__form" action="">
+            <label class="Visit__label" for="">Enter your Full Name</label>
+            <input id="fullName-Inp" type="text">
+            <label class="Visit__label" for="">Choose doctor for visit</label>
+            <label class="Visit__label" for="">Enter your status</label>
+            <select name="" id="status">
+                <option value="Open">Open</option>
+                <option value="Done">Done</option>
+            </select>
+            <select style="height: 30px;" name="doctor" id="doctors">
+                <option value="">Choose your doc</option>
+                <option class="Visit-opt" value="Therapist">Therapist</option>
+                <option class="Visit-opt" value="Dentist">Dentist</option>
+                <option class="Visit-opt" value="Cardiologist">Cardiologist</option>
+            </select>
+            <label class="Visit__label" for="">Uregncy of visit</label>
+            <select style="height: 30px;" name="Urgency" id="Urgency">
+                <option value="High">High</option>
+                <option value="Normal">Normal</option>
+                <option value="Low">Low</option>
+            </select>
+            <div id="dynamic-content">
+
+            </div>
+
+
+            <button id="create-card"  style="margin-left: 70px; display: block;" class="create-visit">Create Visit</button>
+        </form>
+        <img id="close-Visit" class="close-modal" src="imgs/png-klev-club-uve1-p-belii-krestik-png-2.png" alt="close modal">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
