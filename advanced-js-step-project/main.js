@@ -277,7 +277,8 @@ function getAllCards() {
     .then((data) => {
      
       cards = [...data];
-      cards.forEach((card) => {
+      console.log("loged all cards",cards)
+      
         console.log(data.length)
         if (cardsContainer.length === 0) {
           cardsContainer.insertAdjacentHTML('beforeend', `
@@ -390,7 +391,7 @@ function getAllCards() {
             }
 
             function displayResults(filteredCards) {
-              cardsContainer.innerHTML = ''; // Очищаем контейнер
+              cardsContainer.innerHTML = ''; 
           
               filteredCards.forEach(card => {
                 
@@ -416,7 +417,7 @@ function getAllCards() {
           });
         }
 
-      });
+      }, []);
       console.log(cardsContainer)
 
 
@@ -456,5 +457,4 @@ function getAllCards() {
         })
       }
       DeleatCard()
-    });
-}
+    };
